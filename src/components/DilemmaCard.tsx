@@ -1,10 +1,11 @@
-type DilemmaCardProps = {
+interface DilemmaCardProps {
   dilemma: string;
   isLoading: boolean;
-  onChoice: (choice: string) => void;
-};
+  onChoice: (choice: "Option A" | "Option B") => void; // Change from 'string' to specific union type
+}
 
-function DilemmaCard({ dilemma, isLoading, onChoice }: DilemmaCardProps) {
+// function DilemmaCard({ dilemma, isLoading, onChoice }: DilemmaCardProps) {
+const DilemmaCard: React.FC<DilemmaCardProps> = ({ dilemma, isLoading, onChoice }) =>{
   return (
     <div className="p-6 mb-6 space-y-6 bg-gray-800 rounded-xl">
       <h2 className="text-xl text-center text-gray-100">{dilemma}</h2>

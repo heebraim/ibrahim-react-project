@@ -1,34 +1,16 @@
-// type Category = "Gross" | "Sci-Fi" | "Philosophical" | "Random";
 
-// type Props = {
-//   onSelect: (category: Category) => void;
-// };
-
-// const categories: Category[] = ["Gross", "Sci-Fi", "Philosophical", "Random"];
-
-//  function CategorySelector({ onSelect }: Props) {
-//   return (
-//     <div className="grid max-w-md grid-cols-2 gap-4 mx-auto">
-//       {categories.map((category) => (
-//         <button
-//           key={category}
-//           onClick={() => onSelect(category)}
-//           className="p-4 text-lg font-medium transition-colors bg-gray-800 hover:bg-gray-700 rounded-xl"
-//         >
-//           {category} 🔥
-//         </button>
-//       ))}
-//     </div>
-//   );
-// }
-
-
-// export default CategorySelector;
 
 // components/CategorySelector.tsx
-type Category = "Gross" | "Sci-Fi" | "Philosophical" | "Random" | "Fantasy" |
-  "Technology" | "Sports" | "Motherhood" | "Lifestyle" | "Music" |
-  "Movies" | "Decision" | "Intimacy" | "Relationship" | "Marriage";
+
+import { Category } from '../data'; // Ensure this import exists
+
+interface Props {
+  onSelect: (category: Category) => void;
+}
+
+// type Category = "Gross" | "Sci-Fi" | "Philosophical" | "Random" | "Fantasy" |
+//   "Technology" | "Sports" | "Motherhood" | "Lifestyle" | "Music" |
+//   "Movies" | "Decision" | "Intimacy" | "Relationship" | "Marriage";
 
 const categories: Category[] = [
   "Gross", "Sci-Fi", "Philosophical", "Random", "Fantasy",

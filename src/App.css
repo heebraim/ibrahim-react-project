@@ -1,0 +1,36 @@
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .share-card {
+    zoom: 0.9;
+    padding: 1rem;
+  }
+  
+  .download-btn {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+  
+  /* Prevent zoom on input */
+  input, button {
+    font-size: 16px;
+  }
+}
+
+
+
+
+/* Prevent image context menu interference */
+img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: auto;
+}
+
+/* Mobile modal sizing */
+@media (max-width: 768px) {
+  .preview-modal {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+}
